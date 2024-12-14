@@ -187,8 +187,8 @@ scene.add(textPlane)
 
 // Handle window resize
 window.addEventListener('resize', () => {
-    sizes.width = canvas.clientWidth;
-    sizes.height = canvas.clientHeight;
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
 
     camera.aspect = sizes.width / sizes.height;
     camera.updateProjectionMatrix();
@@ -230,9 +230,38 @@ window.addEventListener('mousemove', (e) => {
     }
 });
 
-const sharedState = {
-    isCameraAnimating: false
-};
+// Touch dragging variables
+let isTouching = false;
+const lastTouch = new THREE.Vector2();
+
+// Touch Start
+renderer.domElement.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) { // Single touch only
+        isTouching = true;
+        lastTouch.set(e.touches[0].clientX, e.touches[0].clientY);
+    }
+}, { passive: false });
+
+// Touch Move
+renderer.domElement.addEventListener('touchmove', (e) => {
+    if (isTouching && e.touches.length === 1) {
+        const deltaX = e.touches[0].clientX - lastTouch.x;
+        const deltaY = e.touches[0].clientY - lastTouch.y;
+
+        // Adjust targetPosition based on touch delta
+        targetPosition.x -= deltaX * panMultiplier;
+        targetPosition.y += deltaY * panMultiplier;
+
+        lastTouch.set(e.touches[0].clientX, e.touches[0].clientY);
+    }
+    // Prevent default to avoid scrolling when interacting with the canvas
+    e.preventDefault();
+}, { passive: false });
+
+// Touch End
+renderer.domElement.addEventListener('touchend', () => {
+    isTouching = false;
+});
 
 
 initializeRaycastControls(scene, camera, canvas, planes, ControlProperties, targetPosition);
