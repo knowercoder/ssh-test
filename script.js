@@ -18,15 +18,15 @@ const textureLoader = new THREE.TextureLoader();
 
 const HomeImage = textureLoader.load(new URL('./static/img/home.jpeg', import.meta.url).toString());
 
-const image1 = textureLoader.load(new URL('./static/img/bathrobe.png', import.meta.url).toString());
-const image2 = textureLoader.load(new URL('./static/img/Screenshot1.png', import.meta.url).toString());
-const image3 = textureLoader.load(new URL('./static/img/Screenshot2.png', import.meta.url).toString());
-const image4 = textureLoader.load(new URL('./static/img/Screenshot3.png', import.meta.url).toString());
-const image5 = textureLoader.load(new URL('./static/img/Render1a.png', import.meta.url).toString());
+const image1 = textureLoader.load(new URL('./static/img/bathrobe.jpg', import.meta.url).toString());
+const image2 = textureLoader.load(new URL('./static/img/Screenshot1.jpg', import.meta.url).toString());
+const image3 = textureLoader.load(new URL('./static/img/Screenshot2.jpg', import.meta.url).toString());
+const image4 = textureLoader.load(new URL('./static/img/Screenshot3.jpg', import.meta.url).toString());
+const image5 = textureLoader.load(new URL('./static/img/Render1a.jpg', import.meta.url).toString());
 const image6 = textureLoader.load(new URL('./static/img/STL_Cap_Final_Cool_HI_res.jpg', import.meta.url).toString());
 const image7 = textureLoader.load(new URL('./static/img/STL_FACE_final_sj_new.jpg', import.meta.url).toString());
 const image8 = textureLoader.load(new URL('./static/img/STL_chilll_blue_final.jpg', import.meta.url).toString());
-const image9 = textureLoader.load(new URL('./static/img/STL_hero_logo_Embroidery.png', import.meta.url).toString());
+const image9 = textureLoader.load(new URL('./static/img/STL_hero_logo_Embroidery.jpg', import.meta.url).toString());
 const RoundedSqMask = textureLoader.load(new URL('./static/img/RoundedSquare.png', import.meta.url).toString());
 
 //videos
