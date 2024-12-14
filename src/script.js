@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { StorylineShader } from './StorylineShader.js';
-//import { initializeRaycastControls } from './MouseControls.js';
+import { initializeRaycastControls } from './MouseControls.js';
 import { createTextTexture } from './TextureUtils.js';
 
 // Canvas
@@ -235,7 +235,7 @@ const sharedState = {
 };
 
 
-//initializeRaycastControls(scene, camera, canvas, planes, ControlProperties, targetPosition);
+initializeRaycastControls(scene, camera, canvas, planes, ControlProperties, targetPosition);
 
 let startTime = Date.now();
 function animate() {
