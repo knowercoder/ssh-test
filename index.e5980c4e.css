@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.webgl {
+  outline: none;
+  width: 100%;
+  height: 100vh;
+}
+/*# sourceMappingURL=index.e5980c4e.css.map */

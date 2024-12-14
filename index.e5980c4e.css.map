@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAMA;;;;AAMA","sources":["main.css"],"sourcesContent":["*\r\n{\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nhtml,\r\nbody\r\n{\r\n    overflow: hidden;\r\n}\r\n\r\n.webgl\r\n{\r\n    height: 100vh;\r\n    width: 100%;\r\n    outline: none;\r\n}\r\n"],"names":[],"version":3,"file":"index.e5980c4e.css.map","sourceRoot":"/__parcel_source_root/"}
